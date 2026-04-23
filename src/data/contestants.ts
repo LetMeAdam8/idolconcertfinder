@@ -129,7 +129,7 @@ export const CONTESTANTS: Contestant[] = [
   // Willie Spence (Runner-up) passed away in 2022 — excluded
   { id: "grace-kinstler",      name: "Grace Kinstler",       season: 19, placement: "3rd Place", attractionId: "" },
   { id: "casey-bishop",        name: "Casey Bishop",         season: 19, placement: "4th Place", attractionId: "" },
-  { id: "benson-boone",        name: "Benson Boone",         season: 19, placement: "Top 24",    attractionId: "" },
+  { id: "benson-boone",        name: "Benson Boone",         season: 19, placement: "Top 24",    attractionId: "K8vZ917Qjw0" },
 
   // ── Season 20 ───────────────────────────────────────────────────────────────
   { id: "noah-thompson",       name: "Noah Thompson",        season: 20, placement: "Winner",    attractionId: "K8vZ917QlzV" },
