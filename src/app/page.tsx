@@ -19,11 +19,13 @@ export default function HomePage() {
   const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [hoveredConcert, setHoveredConcert] = useState<Concert | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>("split");
+  const [searchedRadius, setSearchedRadius] = useState<number>(100);
 
   const handleSearch = async (params: SearchParams) => {
     setLoading(true);
     setError(null);
     setSearched(true);
+    setSearchedRadius(params.radiusMiles || 100);
 
     try {
       const query = new URLSearchParams();
@@ -45,7 +47,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
-      {/* Header */}
       <header className="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center gap-3">
           <div className="bg-red-500 text-white rounded-xl p-2">
@@ -55,26 +56,24 @@ export default function HomePage() {
             <h1 className="font-extrabold text-gray-900 text-xl leading-tight tracking-tight">
               Idol Concert Finder
             </h1>
-            <p className="text-xs text-gray-400">Find upcoming concerts from American Idol alumni</p>
+            <p className="text-xs text-gray-400">
+              Find upcoming concerts from American Idol alumni
+            </p>
           </div>
         </div>
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8 space-y-6">
-        {/* Search form */}
         <SearchForm onSearch={handleSearch} loading={loading} />
 
-        {/* Error state */}
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm">
             {error}
           </div>
         )}
 
-        {/* Results area */}
         {searched && !loading && (
           <>
-            {/* Results header + view toggle */}
             <div className="flex items-center justify-between flex-wrap gap-3">
               <p className="text-gray-600 text-sm font-medium">
                 {concerts.length > 0
@@ -101,16 +100,14 @@ export default function HomePage() {
               )}
             </div>
 
-            {/* Layout: split / list / map */}
             {concerts.length > 0 && (
               <div
-                className={`${
+                className={
                   viewMode === "split"
                     ? "grid grid-cols-1 lg:grid-cols-2 gap-6"
                     : "block"
-                }`}
+                }
               >
-                {/* Concert list */}
                 {viewMode !== "map" && (
                   <div className="overflow-y-auto max-h-[80vh] pr-1">
                     <ConcertList
@@ -121,7 +118,6 @@ export default function HomePage() {
                   </div>
                 )}
 
-                {/* Map */}
                 {viewMode !== "list" && (
                   <div
                     className={`rounded-2xl overflow-hidden shadow-md border border-gray-100 ${
@@ -131,6 +127,7 @@ export default function HomePage() {
                     <ConcertMap
                       concerts={concerts}
                       userLocation={userLocation}
+                      radiusMiles={searchedRadius}
                       highlightedId={hoveredConcert?.id}
                     />
                   </div>
@@ -138,14 +135,10 @@ export default function HomePage() {
               </div>
             )}
 
-            {/* Empty state */}
-            {concerts.length === 0 && (
-              <ConcertList concerts={[]} />
-            )}
+            {concerts.length === 0 && <ConcertList concerts={[]} />}
           </>
         )}
 
-        {/* Landing state (before first search) */}
         {!searched && (
           <div className="text-center py-20 text-gray-400">
             <p className="text-5xl mb-4">🎤</p>
