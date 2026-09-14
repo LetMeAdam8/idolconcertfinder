@@ -48,20 +48,36 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
       <header className="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center gap-3">
-          <div className="bg-red-500 text-white rounded-xl p-2">
-            <Music size={20} />
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+          {/* Left side — logo and tagline */}
+          <div className="flex items-center gap-3">
+            <div className="bg-red-500 text-white rounded-xl p-2">
+              <Music size={20} />
+            </div>
+            <div>
+              <h1 className="font-extrabold text-gray-900 text-xl leading-tight tracking-tight">
+                Idol Concert Finder
+              </h1>
+              <p className="text-xs text-gray-400">
+                Find upcoming concerts from American Idol alumni
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="font-extrabold text-gray-900 text-xl leading-tight tracking-tight">
-              Idol Concert Finder
-            </h1>
-            <p className="text-xs text-gray-400">
-              Find upcoming concerts from American Idol alumni
-            </p>
-          </div>
+
+          {/* Right side — navigation */}
+          <nav className="flex items-center gap-6">
+            
+              href="/about"
+              className="text-sm font-medium text-gray-500 hover:text-red-500 transition-colors"
+            >
+              About
+            </a>
+          </nav>
+
         </div>
       </header>
+      
 
       <main className="max-w-7xl mx-auto px-4 py-8 space-y-6">
         <SearchForm onSearch={handleSearch} loading={loading} />
