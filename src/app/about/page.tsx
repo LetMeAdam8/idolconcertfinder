@@ -10,13 +10,13 @@ export default function AboutPage() {
         <p>
           Idol Concert Finder is a free tool built for fans of American Idol.
           We track upcoming live concerts from over 80 former American Idol
-          contestants spanning all 24 seasons — from Season 1 winner Kelly
+          contestants spanning all 24 seasons, from Season 1 winner Kelly
           Clarkson to Season 24 winner Hannah Harper.
         </p>
 
         <p>
           Search by your city, state, or zip code to find shows happening near
-          you. Set a radius — 25, 50, 100, or 200 miles — and we'll show you
+          you. Set a radius — 25, 50, 100, 200, or 500 miles — and we'll show you
           every Idol alumni concert within that distance, sorted by date. You
           can also filter by a specific artist to see all of their upcoming
           tour dates at once.
@@ -33,7 +33,7 @@ export default function AboutPage() {
         </h2>
         <p>
           We cover all American Idol winners, runners-up, and notable finalists
-          who went on to have active music careers — including household names
+          who went on to have active music careers, including household names
           like Carrie Underwood, Kelly Clarkson, and Benson Boone, as well as
           fan favorites from every season of the show.
         </p>
@@ -46,7 +46,7 @@ export default function AboutPage() {
           API using each artist's verified attraction ID, ensuring accurate
           results. Location search uses Google's Geocoding API to convert your
           city or zip code into coordinates, and distance filtering is
-          calculated using precise geographic math — so the radius you choose
+          calculated using precise geographic math, so the radius you choose
           is exact.
         </p>
 
@@ -54,7 +54,7 @@ export default function AboutPage() {
           Is It Free?
         </h2>
         <p>
-          Yes, completely free. We do not sell tickets — we link directly to
+          Yes, completely free. We do not sell tickets; we link directly to
           Ticketmaster where you can purchase tickets at face value. We are not
           affiliated with American Idol, ABC, or Ticketmaster.
         </p>
