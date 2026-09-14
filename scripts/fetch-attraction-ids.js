@@ -2,7 +2,7 @@
 // Run: node scripts/fetch-attraction-ids.js
 // Then paste results into contestants.ts
 
-const API_KEY = "YOUR_TICKETMASTER_KEY_HERE";
+const API_KEY = "l7jSVELMkkuuywSRbYKtmv2WH3xd7CXA";
 
 // Only contestants with empty attractionId — existing IDs are already confirmed
 const artists = [
@@ -71,6 +71,10 @@ const artists = [
   { id: "triston-harper",      keyword: "Triston Harper" },
   { id: "julia-gagnon",        keyword: "Julia Gagnon" },
   { id: "jamal-roberts",       keyword: "Jamal Roberts" },
+  { id: "john-foster",       keyword: "John Foster" },
+  { id: "hannah-harper",     keyword: "Hannah Harper" },
+  { id: "jordan-mccullough", keyword: "Jordan McCullough" },
+  { id: "keyla-richardson",  keyword: "Keyla Richardson" },
 ];
 
 async function fetchId(keyword) {
