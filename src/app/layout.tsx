@@ -31,6 +31,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.idolconcertfinder.com",
   },
+    icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png" },
+    ],
+    other: [
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+  },
   verification: {
     google: "ve5KixYHT4kiQ4rYzY-iLmNdbIXckI6VtTXftgVOuSA",
   },
