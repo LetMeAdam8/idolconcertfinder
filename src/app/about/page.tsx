@@ -58,6 +58,15 @@ export default function AboutPage() {
           Ticketmaster where you can purchase tickets at face value. We are not
           affiliated with American Idol, ABC, or Ticketmaster.
         </p>
+        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">
+  Affiliate Disclosure
+</h2>
+<p>
+  Idol Concert Finder participates in the Amazon Associates Program and
+  other affiliate programs. We may earn a commission when you purchase
+  products through links on this site at no additional cost to you.
+  Commissions help keep this site free for everyone.
+</p>
       </div>
     </div>
   );
