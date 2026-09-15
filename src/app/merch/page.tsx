@@ -44,7 +44,7 @@ const PRODUCTS: Product[] = [
   {
     name: "American Idol Greatest Hits",
     description: "Compilation albums featuring your favorite Idol alumni.",
-    affiliateUrl: "https://www.amazon.com/s?k=american+idol+album&tag=idolconcertfi-20",
+    affiliateUrl: "https://www.amazon.com/s?k=american+idol+albums&tag=idolconcertfi-20",
     category: "Vinyl and Music",
   },
 
@@ -125,7 +125,7 @@ export default function MerchPage() {
             Gear up for the show. Everything you need before, during, and after the concert.
           </p>
           <p className="text-xs text-gray-400 mt-2">
-            As an Amazon Associate we earn from qualifying purchases. This helps keep Idol Concert Finder free.
+            As an Amazon Associate, we earn from qualifying purchases. This helps keep Idol Concert Finder free.
           </p>
         </div>
 
