@@ -48,7 +48,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
       <header className="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-30">
-        <script type="text/javascript">(function(i,m,p,a,c,t){c.ire_o=p;c[p]=c[p]||function(){(c[p].a=c[p].a||[]).push(arguments)};t=a.createElement(m);var z=a.getElementsByTagName(m)[0];t.async=1;t.src=i;z.parentNode.insertBefore(t,z)})('https://utt.impactcdn.com/P-A7778828-03e4-4219-b927-c582ef1aa5881.js','script','impactStat',document,window);impactStat('transformLinks');impactStat('trackImpression');</script>
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
 
           {/* Left side — logo and tagline */}
