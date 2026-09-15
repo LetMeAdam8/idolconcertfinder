@@ -66,9 +66,6 @@ export default function HomePage() {
           </div>
 
 {/* Right side — navigation */}
-<nav className="flex items-center gap-6">
-  <a href="/about" className="text-sm font-medium text-gray-500 hover:text-red-500 transition-colors">About</a>
-</nav>
 
 <nav className="flex items-center gap-6">
   <a href="/merch" className="text-sm font-medium text-gray-500 hover:text-red-500 transition-colors">Shop</a>
